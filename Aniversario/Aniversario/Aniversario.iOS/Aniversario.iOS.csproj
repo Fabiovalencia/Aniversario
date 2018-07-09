@@ -156,4 +156,7 @@
       <Name>Aniversario</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Inicio.png" />
+  </ItemGroup>
 </Project>

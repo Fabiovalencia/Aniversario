@@ -1,12 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Aniversario.Views.LoginPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Aniversario.Views.LoginPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Ingreso"
+    >
+   
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Login"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView >
+            <StackLayout
+                 Padding="10,20,10,5">
+                <Label
+                    Text="Aniversario"
+                    HorizontalOptions="Center"
+                    FontAttributes="Italic"
+                    FontSize="Medium">
+                </Label>
+                <Image
+                    Source="Inicio">
+                </Image>
+                <Label
+                    Text="Usuario">
+                </Label>
+                <Entry
+                    Keyboard="Email"
+                    Placeholder="Ingresa tu usuario">
+                </Entry>
+                <Label
+                    Text="Contraseña">
+                </Label>
+                <Entry
+                    IsPassword="True"
+                    Placeholder="Ingresa tu contraseña">
+                </Entry>
+                <ActivityIndicator>
+
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="Black"
+                    BorderRadius="25"
+                    TextColor="White"
+                    Text="Ingresar">
+                </Button>
+            </StackLayout>
+        </ScrollView>           
     </ContentPage.Content>
 </ContentPage>
