@@ -10,7 +10,8 @@ namespace Aniversario.Infraestructure
         #region Properties
         public MainViewModel Main
         {
-            get; set;
+            get;
+            set;
         }
 
         #endregion

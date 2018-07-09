@@ -4,11 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Aniversario.Views.LoginPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
-    Title="Ingreso"
-    >
-   
+    Title="Ingreso">   
     <ContentPage.Content>
-        <ScrollView >
+        <ScrollView 
+            BindingContext="{Binding Login}">
             <StackLayout
                  Padding="10,20,10,5">
                 <Label
@@ -25,6 +24,7 @@
                 </Label>
                 <Entry
                     Keyboard="Email"
+                    Text="{Binding Email, Mode=TwoWay}"
                     Placeholder="Ingresa tu usuario">
                 </Entry>
                 <Label
@@ -32,14 +32,17 @@
                 </Label>
                 <Entry
                     IsPassword="True"
+                    Text="{Binding Password, Mode=TwoWay}"
                     Placeholder="Ingresa tu contraseña">
                 </Entry>
-                <ActivityIndicator>
-
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <Button
                     BackgroundColor="Black"
                     BorderRadius="25"
+                    Command="{Binding LoginCommand}"
                     TextColor="White"
                     Text="Ingresar">
                 </Button>
