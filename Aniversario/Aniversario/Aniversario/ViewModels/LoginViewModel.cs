@@ -1,12 +1,13 @@
 ﻿namespace Aniversario.ViewModels
 {
+    using Aniversario.Views;
     using GalaSoft.MvvmLight.Command;
     using System.ComponentModel;
     using System.Windows.Input;
     using Xamarin.Forms;
 
     public class LoginViewModel : BaseViewModel
-    {        
+    {
         #region Attributes
         private string email;
         private string password;
@@ -77,7 +78,7 @@
                 return;
 
             }
-           
+
 
 
             if (string.IsNullOrEmpty(this.Password))
@@ -128,7 +129,12 @@
                     "Lo lograste!!!",
                     "Esto es con mucho amor, y es una versión Beta, mejorará con el pasar del tiempo.",
                     "Aceptar");
-            #endregion
+            this.Email = string.Empty;
+            this.Password = string.Empty;
+
+            MainViewModel.GetInstance().Palabras = new PalabrasViewModels();
+            await Application.Current.MainPage.Navigation.PushAsync(new PalabrasPage());
         }
+        #endregion
     }
 }

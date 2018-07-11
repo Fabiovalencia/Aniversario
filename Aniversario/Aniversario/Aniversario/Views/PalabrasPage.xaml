@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aniversario.Views.PalabrasPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Palabras">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout
+            BindingContext="{Binding Palabras}"
+            Padding="5">
+            <Label 
+                FontSize="Large"
+                Text=" Hola Culiche, feliz primer aniversario, ¿te preguntabas que hacía en el PC? Mi error de ayer 10 de julio no era lo que te dije si no de esta aplicación jeje. Mi amor, como en los viejos tiempo vuelvo y te escribo algo, pero esta vez con modernidad y a mi mejor estilo, haciendo algo que me nace del corazón, que toma un esfuerzo como persona y no simplemente comprar algo. 
+                       Quiero darte las gracias por estar a mi lado, por darme amor, por dejar que yo me enamore de ti todos los días, discúlpame también por las malas cosas que te he hecho sentir, pero es pero con todo mi ser que este sea el primero de muchos años más.
+                       Eres dulce, gentil, noble, inteligente y linda, me encantan tus mininas, tener tantos gustos en común, e infinidad de cosas. Pero así mismo tenemos cosas que mejorar y espero hacerlo por el resto de la vida que nos queda. No siendo más, gracias por inspirarme hacer cosas como estas. 
+                       PD: esta aplicación mejorara con el paso del tiempo."
+                />
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
