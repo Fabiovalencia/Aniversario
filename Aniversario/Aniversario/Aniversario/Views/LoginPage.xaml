@@ -43,6 +43,7 @@
                     BackgroundColor="Black"
                     BorderRadius="25"
                     Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                     TextColor="White"
                     Text="Ingresar">
                 </Button>
